@@ -39,6 +39,7 @@ Template.addForm.events({
       desc: $('#desc').val(),
 
       rating: [tmplt.$('.glyphicon-star').length],
+      avRating: tmplt.$('.glyphicon-star').length,
       timeAdded: moment().unix(),
       comments:[{timeAdded:moment().unix(), text:$('#comments').val()}],
       topics:[]
