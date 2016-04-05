@@ -34,7 +34,10 @@ Template.addForm.events({
     console.log(link)
 // create some logic to add topics
     let newLink = {
-      link: link,
+      url: link,
+      name: $('#name').val(),
+      desc: $('#desc').val(),
+
       rating: $('.glyphicon-star').length,
       timeAdded: moment().unix(),
       comments:[{timeAdded:moment().unix(), text:$('#comments').val()}],
