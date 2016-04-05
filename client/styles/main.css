@@ -29,5 +29,22 @@ h3 {
 }
 
 .dots {
-  padding: 2px 7px 0 5px
+  padding: 2px 5px 0 5px
+}
+
+.fix-p-margin {
+  margin: 3px 0;
+}
+
+.comment-timestamp {
+  font-size: .7em;
+}
+
+.modal-body {
+  overflow-y: scroll;
+  max-height: 625px;
+}
+
+.modal-dialog {
+  width: 345px;
 }
