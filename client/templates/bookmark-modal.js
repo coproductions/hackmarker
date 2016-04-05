@@ -3,6 +3,7 @@ Template.bookmarkModal.helpers({
     return Session.get('currentModal').comments;
   },
   avRating: function(){
+    if(!Session.get('currentModal')) return;
     return Session.get('currentModal').avRating;
     let arr = Session.get('currentModal').rating;
     let rating =  _.reduce(arr, function(memo, num) {
@@ -49,8 +50,9 @@ Template.bookmarkModal.events({
       let newAvRating =  _.reduce(arr, function(memo, num) {
         return memo + num;
       }, newRating) / (arr.length === 0 ? 1 : arr.length+1);
-      newAvRating = Math.floor(rating + 0.5);
-      Links.update({_id: Session.get("currentModal")._id},{avRating: newAvRating,$push:{rating: newRating}})
+      newAvRating = Math.floor(newAvRating + 0.5);
+      console.log('new av',newAvRating)
+      Links.update({_id: Session.get("currentModal")._id},{$set:{avRating: newAvRating},$push:{rating: newRating}})
 
     }
 
