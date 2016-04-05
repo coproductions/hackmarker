@@ -74,6 +74,13 @@ body {
   text-decoration: underline;
 }
 
+.bookmark-detail {
+  background-color: RGBA(255, 255, 255, .30);
+  margin-bottom: 5px;
+  padding-top: 3px;
+  padding-right: 3px;
+}
+
 .tab-content {
   height: 556px;
   background-color: white;
