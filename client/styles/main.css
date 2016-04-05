@@ -12,6 +12,17 @@ body {
 
 }
 
+.add-form {
+  background-color: RGBA(62, 107, 133, 1.00);
+  padding-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.half-width {
+  width: 50%;
+}
+
 .top-m-5 {
   margin-top: 5px;
 }
@@ -29,6 +40,23 @@ body {
   height: 100%;
   overflow-y: scroll;
 }
+
+/*.nav-tabs {
+  background-color: RGBA(244, 146, 30, 1.00);
+
+}
+
+.nav-tabs > li > a {
+  border: medium none;
+}
+
+.nav-tabs > li > a:hover{
+  background-color: RGBA(255, 255, 255, 1.00);
+  border: medium none;
+  border-radius: 0;
+  color:#fff;
+}*/
+
 
 .category {
 /*  margin-top: 3px;
@@ -60,4 +88,8 @@ body {
 
 .modal-dialog {
   width: 345px;
+}
+
+.bookmark-left {
+  overflow-x: hidden;
 }
