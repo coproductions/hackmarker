@@ -1,6 +1,13 @@
 Template.bookmarkModal.helpers({
   comments: function(){
     return Session.get('currentModal').comments;
+  },
+  aveRating: function(){
+    let arr = Session.get('currentModal').rating;
+    let rating =  _.reduce(arr, function(memo, num) {
+        return memo + num;
+      }, 0) / (arr.length === 0 ? 1 : arr.length);
+     return Math.floor(rating + 0.5);
   }
 });
 
@@ -12,5 +19,31 @@ Template.bookmarkModal.events({
     Links.update({_id:linkId},{$push:{comments:newComment}})
     $('#comment').val('');
      $('#bookmark-modal').modal('hide');
-  }
+  },
+   'click .glyphicon' : function(evt, tmplt){
+      event.preventDefault();
+      $('.rate-star').removeClass('glyphicon-star');
+      $('.rate-star').addClass('glyphicon-star-empty');
+
+      switch(evt.target.id){
+        case "rate-star5":
+          $('#rate-star5').toggleClass('glyphicon-star-empty');
+          $('#rate-star5').toggleClass('glyphicon-star');
+        case "rate-star4":
+          $('#rate-star4').toggleClass('glyphicon-star-empty');
+          $('#rate-star4').toggleClass('glyphicon-star');
+        case "rate-star3":
+          $('#rate-star3').toggleClass('glyphicon-star-empty');
+          $('#rate-star3').toggleClass('glyphicon-star');
+        case "rate-star2":
+          $('#rate-star2').toggleClass('glyphicon-star-empty');
+          $('#rate-star2').toggleClass('glyphicon-star');
+        case "rate-star1":
+          $('#rate-star1').toggleClass('glyphicon-star-empty');
+          $('#rate-star1').toggleClass('glyphicon-star');
+      }
+      let newRating = tmplt.$('.glyphicon-star').length;
+      Links.update({_id: Session.get("currentModal")._id},{$push:{rating: newRating}})
+    }
+
 })
