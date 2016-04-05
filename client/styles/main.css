@@ -49,7 +49,6 @@ body {
     border: 1px solid RGBA(133, 133, 133, 1.00);
 }
 
-
 .nav-tabs > li > a,
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
@@ -68,6 +67,10 @@ body {
   background-color: RGBA(244, 146, 30, .60);
   /*color: white;*/
   height: 556px;
+}
+
+.selected {
+  font-weight: bold;
 }
 
 .tab-content {
