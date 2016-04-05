@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+body {
+  font-family: 'Hind', sans-serif;
+}
+
 #main {
   width: 350px;
   margin: 0 auto;
