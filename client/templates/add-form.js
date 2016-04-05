@@ -38,7 +38,7 @@ Template.addForm.events({
       name: $('#name').val(),
       desc: $('#desc').val(),
 
-      rating: $('.glyphicon-star').length,
+      rating: [tmplt.$('.glyphicon-star').length],
       timeAdded: moment().unix(),
       comments:[{timeAdded:moment().unix(), text:$('#comments').val()}],
       topics:[]
@@ -47,7 +47,7 @@ Template.addForm.events({
       Session.set('formOpen',false);
 
   },
-  'click .glyphicon' : function(evt, templt){
+  'click .glyphicon' : function(evt, tmplt){
       event.preventDefault();
       $('.star').removeClass('glyphicon-star');
       $('.star').addClass('glyphicon-star-empty');

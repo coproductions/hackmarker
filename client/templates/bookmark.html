@@ -2,13 +2,13 @@
   <!-- to list a bookmark -->
   <div class="row">
     <div class="col-xs-8">
-      <p class="fix-p-margin">LINK NAME</p>
-      <p class="added-text fix-p-margin"><a href="" target="_blank">LINK ADDRESS</a></p>
-      <p class="added-text fix-p-margin">added DATE</p>
+      <p class="fix-p-margin">{{this.name}}</p>
+      <p class="added-text fix-p-margin"><a href="" target="_blank">{{this.url}}</a></p>
+      <p class="added-text fix-p-margin">{{formatTime this.timeAdded 'fromNow'}}</p>
     </div>
     <div class="col-xs-4 text-center">
       <div class="row">
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> <span>4</span>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> <span>{{getAvRating this.rating}}</span>
       </div>
       <div class="row">
         <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>

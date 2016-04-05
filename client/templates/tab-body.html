@@ -7,7 +7,9 @@
       <div class="row">
         <p class="text-center"><a href=""><span id="recent">most recent</span></a> | <a href=""><span id="rating">rating</span></a></p>
       </div>
-      {{> bookmark}}
+      {{#each displayLinks}}
+        {{> bookmark}}
+      {{/each}}
     </div>
   </div>
 </template>

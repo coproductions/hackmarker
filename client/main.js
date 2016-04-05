@@ -4,6 +4,25 @@ import './main.html';
 
 Session.setDefault('formOpen',false);
 
+Template.registerHelper('formatTime',
+  function(time,type){
+    switch(type){
+      case 'fromNow':
+        return moment.unix(time).fromNow();
+      case 'iso':
+        return moment.unix(time).toISOString();
+      default:
+        return moment.unix(time).format('LLLL');
+    }
+  });
+
+Template.registerHelper('getAvRating',function(arr){
+     return _.reduce(arr, function(memo, num) {
+        return memo + num;
+      }, 0) / (arr.length === 0 ? 1 : arr.length);
+
+});
+
 // Template.hello.onCreated(function helloOnCreated() {
 //   // counter starts at 0
 //   this.counter = new ReactiveVar(0);
