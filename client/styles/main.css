@@ -12,8 +12,17 @@ body {
 
 }
 
-h3 {
+.top-m-5 {
   margin-top: 5px;
+}
+
+.fix-left {
+  padding-left: 3px;
+}
+
+.fix-top {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .scroll {

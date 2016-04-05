@@ -1,14 +1,18 @@
 <template name="header">
   <div class="row">
     <div class="col-xs-5">
-      <h3 class="text-left">Hackmarker</h3>
+      <h3 class="text-left top-m-5">Hackmarker</h3>
     </div>
-    <div class="col-xs-6">
-      <form class="form-inline">
+    <div class="col-xs-7">
+      <form class="form-horizontal">
         <div class="form-group">
-          <button id="add-link-btn" class="btn btn-default btn-sm" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-          <label for="link-input"></label>
-          <input id="link-input" class="form-control" type="text" />
+          <div class="col-xs-3 top-m-5">
+            <button id="add-link-btn" class="btn btn-default btn-sm" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+          </div>
+          <div class="col-xs-9 top-m-5 fix-left">
+            <!-- <label for="link-input"></label> -->
+            <input id="link-input" class="form-control input-sm" type="text" />
+          </div>
         </div>
       </form>
     </div>
