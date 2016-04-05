@@ -2,7 +2,8 @@ Template.bookmarkModal.helpers({
   comments: function(){
     return Session.get('currentModal').comments;
   },
-  aveRating: function(){
+  avRating: function(){
+    return Session.get('currentModal').avRating;
     let arr = Session.get('currentModal').rating;
     let rating =  _.reduce(arr, function(memo, num) {
         return memo + num;
@@ -43,7 +44,14 @@ Template.bookmarkModal.events({
           $('#rate-star1').toggleClass('glyphicon-star');
       }
       let newRating = tmplt.$('.glyphicon-star').length;
-      Links.update({_id: Session.get("currentModal")._id},{$push:{rating: newRating}})
+
+      let arr = Session.get('currentModal').rating;
+      let newAvRating =  _.reduce(arr, function(memo, num) {
+        return memo + num;
+      }, newRating) / (arr.length === 0 ? 1 : arr.length+1);
+      newAvRating = Math.floor(rating + 0.5);
+      Links.update({_id: Session.get("currentModal")._id},{avRating: newAvRating,$push:{rating: newRating}})
+
     }
 
 })
