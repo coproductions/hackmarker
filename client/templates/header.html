@@ -8,6 +8,11 @@
         <button id="add-link-btn" class="btn btn-default btn-sm" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
         <input id="link-input" class="form-control" type="text" />
       </form>
+
     </div>
+
   </div>
+  {{#if hasInput}}
+    {{> addForm}}
+  {{/if}}
 </template>
