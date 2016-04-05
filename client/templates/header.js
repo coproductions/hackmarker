@@ -21,9 +21,14 @@ Template.header.events({
       hasInput.set(linkInput);
 
   },
-  'keydown #link-input': function(evt, tmplt){
-          //event.preventDefault();
-      var linkInput = $('#link-input').val();
+  // 'keydown #link-input': function(evt, tmplt){
+  //         //event.preventDefault();
+  //     var linkInput = $('#link-input').val();
+  //     if(!linkInput) return;
+  //     hasInput.set(linkInput);
+  // }
+  'click #add-link-btn' : function(evt, templt){
+    var linkInput = $('#link-input').val();
       if(!linkInput) return;
       hasInput.set(linkInput);
   }
