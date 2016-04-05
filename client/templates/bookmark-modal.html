@@ -14,7 +14,7 @@
               <!-- rating -->
               <div class="col-xs-6">
                 <div class="form-group">
-                  <label for="rate" class="col-xs-4">
+                  <label for="rate" class="col-xs-4">Rate:
                   </label>
                   <div class="col-xs-8">
                     <span id="rate-star1" class="rate-star glyphicon glyphicon-star-empty" aria-hidden="true"></span>
@@ -28,15 +28,16 @@
 
               <!-- average rating -->
               <div class="col-xs-6 text-right">
-
-                <p >Ave Rating: <span class="aveRating">{{avRating}}</span></p>
+                <p>Avg. Rating: <span class="aveRating">{{avRating}}</span></p>
               </div>
             </div>
 
             <!-- comments -->
-            <div class="row">
-              <p>Comments</p>
+            <div class="fluid-container">
+              <p class="fix-p-margin">Comments</p>
             </div>
+
+            <div class="line"></div>
 
             <!-- list current comments -->
             {{#each comments}}
@@ -45,15 +46,17 @@
             </div>
             {{/each}}
 
+            <div class="line"></div>
 
             <!-- add comment form -->
-            <div class="form-group">
-
+            <div id="add-comment-form" class="form-group">
               <label for="comment" class="col-xs-8">Add Comment</label>
               <div class="col-xs-4">
                 <button id="addCommentButton" type="submit" class="btn btn-primary btn-sm">Add</button>
               </div>
-              <textarea id="comment" class="form-control" rows="2"></textarea>
+              <div class="col-md-12">
+                <textarea id="comment" class="form-control" rows="2"></textarea>
+              </div>
             </div>
           </form>
         </div>
