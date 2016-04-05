@@ -32,8 +32,15 @@ Template.addForm.events({
     console.log(link)
 // create some logic to add topics
     let newLink = {
-      link: link
+      link: link,
+      rating: $('.glyphicon-star').length,
+      timeAdded: moment().unix(),
+      comments:[{timeAdded:moment().unix(), text:$('#comments').val()}],
+      topics:[]
     }
+    Links.insert(newLink);
+      Session.set('formOpen',false);
+
   },
   'click .glyphicon' : function(evt, templt){
       event.preventDefault();
