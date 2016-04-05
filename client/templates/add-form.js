@@ -18,6 +18,8 @@ Template.addForm.rendered = function(){
   let url = $('#link-input').val();
   renderAddForm();
   $("#add-link-btn").on("click",renderAddForm);
+   $('.star').removeClass('glyphicon-star');
+      $('.star').addClass('glyphicon-star-empty');
 };
 
 
@@ -44,8 +46,8 @@ Template.addForm.events({
   },
   'click .glyphicon' : function(evt, templt){
       event.preventDefault();
-      $('.glyphicon').removeClass('glyphicon-star');
-      $('.glyphicon').addClass('glyphicon-star-empty');
+      $('.star').removeClass('glyphicon-star');
+      $('.star').addClass('glyphicon-star-empty');
 
       switch(evt.target.id){
         case "star5":
