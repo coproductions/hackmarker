@@ -11,3 +11,23 @@
 h3 {
   margin-top: 5px;
 }
+
+.scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.category {
+/*  margin-top: 3px;
+  margin-bottom: 3px;*/
+/*  padding-top: 3px;
+  padding-bottom: 3px;
+*/}
+
+.added-text {
+  font-size: .7em;
+}
+
+.dots {
+  padding: 2px 7px 0 5px
+}

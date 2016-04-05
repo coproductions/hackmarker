@@ -5,19 +5,17 @@
       <li role="presentation" class="active"><a href="" aria-controls="topics" role="tab" data-toggle="tab">Topics</a></li>
       <li role="presentation"><a href="" aria-controls="teammates" role="tab" data-toggle="tab">Teammates</a></li>
     </ul>
+  </div>
 
+  <!-- <div class="row"> -->
     <!-- Tab panes -->
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="topics">
-        <div class="row">
-          {{> topics}}
-        </div>
+        {{> tabBody}}
       </div>
       <div role="tabpanel" class="tab-pane" id="teammates">
-        <div class="row">
-          {{> teammates}}
-        </div>
+        {{> tabBody}}
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
