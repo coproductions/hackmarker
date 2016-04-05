@@ -76,8 +76,16 @@ body {
 .bookmark-detail {
   background-color: RGBA(255, 255, 255, .30);
   margin-bottom: 5px;
-  padding-top: 3px;
-  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.bookmark-detail a:link, a:visited {
+  color: RGBA(120, 120, 120, 1.00);
+}
+
+.bookmark-detail a:visited {
+  color: RGBA(133, 133, 133, 1.00);
 }
 
 .tab-content {
@@ -112,4 +120,26 @@ body {
 
 .bookmark-left {
   overflow-x: hidden;
+}
+
+#add-comment-form {
+  margin-bottom: 5px;
+}
+
+#add-comment-form button,
+#add-comment-form label {
+  margin: 10px 0;
+}
+
+.comments {
+  margin: 5px 0;
+}
+
+.line {
+  background-color: RGBA(195, 195, 195, 1.00);
+  width: 100%;
+  height: 1px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  margin-bottom: 5px;
 }
