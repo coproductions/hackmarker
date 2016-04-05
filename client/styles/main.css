@@ -5,4 +5,9 @@
   height: 650px;
   background-color: RGBA(197, 210, 219, 1.00);
   border: 1px solid black;
+
+}
+
+h3 {
+  margin-top: 5px;
 }
